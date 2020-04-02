@@ -79,9 +79,15 @@ describe('WizardComponent', () => {
     expect(wizardTestFixture.debugElement.query(By.css('aw-wizard > :first-child')).name).toBe('aw-wizard-navigation-bar');
     expect(wizardTestFixture.debugElement.query(By.css('aw-wizard > :last-child')).name).toBe('div');
 
-    expect(navBarEl.classes).toEqual({ 'horizontal': true, 'small': true });
-    expect(wizardEl.classes).toEqual({ 'horizontal': true });
-    expect(wizardStepsDiv.classes).toEqual({ 'wizard-steps': true, 'horizontal': true });
+    expect(
+      Object.keys(navBarEl.classes).filter(m => navBarEl.classes[m] === true)
+    ).toEqual(['horizontal', 'small']);
+    expect(
+      Object.keys(wizardEl.classes).filter(m => wizardEl.classes[m] === true)
+    ).toEqual(['horizontal']);
+    expect(
+      Object.keys(wizardStepsDiv.classes).filter(m => wizardStepsDiv.classes[m] === true)
+    ).toEqual(['wizard-steps', 'horizontal']);
   });
 
   it('should contain navigation bar at the correct position in top navBarLocation mode', () => {
@@ -98,9 +104,15 @@ describe('WizardComponent', () => {
     expect(wizardTestFixture.debugElement.query(By.css('aw-wizard > :first-child')).name).toBe('aw-wizard-navigation-bar');
     expect(wizardTestFixture.debugElement.query(By.css('aw-wizard > :last-child')).name).toBe('div');
 
-    expect(navBarEl.classes).toEqual({ 'horizontal': true, 'small': true });
-    expect(wizardEl.classes).toEqual({ 'horizontal': true });
-    expect(wizardStepsDiv.classes).toEqual({ 'wizard-steps': true, 'horizontal': true });
+    expect(
+      Object.keys(navBarEl.classes).filter(m => navBarEl.classes[m] === true)
+    ).toEqual(['horizontal', 'small']);
+    expect(
+      Object.keys(wizardEl.classes).filter(m => wizardEl.classes[m] === true)
+    ).toEqual(['horizontal']);
+    expect(
+      Object.keys(wizardStepsDiv.classes).filter(m => wizardStepsDiv.classes[m] === true)
+    ).toEqual(['wizard-steps', 'horizontal']);
   });
 
   it('should contain navigation bar at the correct position in left navBarLocation mode', () => {
@@ -117,9 +129,15 @@ describe('WizardComponent', () => {
     expect(wizardTestFixture.debugElement.query(By.css('aw-wizard > :first-child')).name).toBe('aw-wizard-navigation-bar');
     expect(wizardTestFixture.debugElement.query(By.css('aw-wizard > :last-child')).name).toBe('div');
 
-    expect(navBarEl.classes).toEqual({ 'vertical': true, 'small': true });
-    expect(wizardEl.classes).toEqual({ 'vertical': true });
-    expect(wizardStepsDiv.classes).toEqual({ 'wizard-steps': true, 'vertical': true });
+    expect(
+      Object.keys(navBarEl.classes).filter(m => navBarEl.classes[m] === true)
+    ).toEqual(['vertical', 'small']);
+    expect(
+      Object.keys(wizardEl.classes).filter(m => wizardEl.classes[m] === true)
+    ).toEqual(['vertical']);
+    expect(
+      Object.keys(wizardStepsDiv.classes).filter(m => wizardStepsDiv.classes[m] === true)
+    ).toEqual(['wizard-steps', 'vertical']);
   });
 
   it('should contain navigation bar at the correct position in bottom navBarLocation mode', () => {
@@ -136,9 +154,15 @@ describe('WizardComponent', () => {
     expect(wizardTestFixture.debugElement.query(By.css('aw-wizard > :first-child')).name).toBe('div');
     expect(wizardTestFixture.debugElement.query(By.css('aw-wizard > :last-child')).name).toBe('aw-wizard-navigation-bar');
 
-    expect(navBarEl.classes).toEqual({ 'horizontal': true, 'small': true, });
-    expect(wizardEl.classes).toEqual({ 'horizontal': true });
-    expect(wizardStepsDiv.classes).toEqual({ 'wizard-steps': true, 'horizontal': true, });
+    expect(
+      Object.keys(navBarEl.classes).filter(m => navBarEl.classes[m] === true)
+    ).toEqual(['horizontal', 'small']);
+    expect(
+      Object.keys(wizardEl.classes).filter(m => wizardEl.classes[m] === true)
+    ).toEqual(['horizontal']);
+    expect(
+      Object.keys(wizardStepsDiv.classes).filter(m => wizardStepsDiv.classes[m] === true)
+    ).toEqual(['wizard-steps', 'horizontal']);
   });
 
   it('should contain navigation bar at the correct position in right navBarLocation mode', () => {
@@ -155,9 +179,15 @@ describe('WizardComponent', () => {
     expect(wizardTestFixture.debugElement.query(By.css('aw-wizard > :first-child')).name).toBe('div');
     expect(wizardTestFixture.debugElement.query(By.css('aw-wizard > :last-child')).name).toBe('aw-wizard-navigation-bar');
 
-    expect(navBarEl.classes).toEqual({ 'vertical': true, 'small': true, });
-    expect(wizardEl.classes).toEqual({ 'vertical': true });
-    expect(wizardStepsDiv.classes).toEqual({ 'wizard-steps': true, 'vertical': true });
+    expect(
+      Object.keys(navBarEl.classes).filter(m => navBarEl.classes[m] === true)
+    ).toEqual(['vertical', 'small']);
+    expect(
+      Object.keys(wizardEl.classes).filter(m => wizardEl.classes[m] === true)
+    ).toEqual(['vertical']);
+    expect(
+      Object.keys(wizardStepsDiv.classes).filter(m => wizardStepsDiv.classes[m] === true)
+    ).toEqual(['wizard-steps', 'vertical']);
   });
 
   it('should change the navigation mode correctly during runtime', () => {

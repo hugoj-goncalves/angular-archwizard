@@ -40,5 +40,8 @@
       }
     }
   },
-  "defaultProject": "angular-archwizard"
+  "defaultProject": "angular-archwizard",
+  "cli": {
+    "analytics": false
+  }
 }

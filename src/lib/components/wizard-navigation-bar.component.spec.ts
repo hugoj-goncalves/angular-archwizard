@@ -455,7 +455,9 @@ describe('WizardNavigationBarComponent', () => {
   it('should use the \"small\" layout when no navigation bar layout is specified', () => {
     const navBarEl = wizardTestFixture.debugElement.query(By.css('aw-wizard-navigation-bar'));
 
-    expect(navBarEl.classes).toEqual({ 'horizontal': true, 'small': true });
+    expect(
+      Object.keys(navBarEl.classes).filter(m => navBarEl.classes[m] === true)
+    ).toEqual(['horizontal', 'small']);
   });
 
   it('should use the \"small\" layout when it is specified', () => {
@@ -464,7 +466,9 @@ describe('WizardNavigationBarComponent', () => {
     wizardTest.wizard.navBarLayout = 'small';
     wizardTestFixture.detectChanges();
 
-    expect(navBarEl.classes).toEqual({ 'horizontal': true, 'small': true });
+    expect(
+      Object.keys(navBarEl.classes).filter(m => navBarEl.classes[m] === true)
+    ).toEqual(['horizontal', 'small']);
   });
 
   it('should use the \"large-filled\" layout when it is specified', () => {
@@ -473,7 +477,9 @@ describe('WizardNavigationBarComponent', () => {
     wizardTest.wizard.navBarLayout = 'large-filled';
     wizardTestFixture.detectChanges();
 
-    expect(navBarEl.classes).toEqual({ 'horizontal': true, 'large-filled': true });
+    expect(
+      Object.keys(navBarEl.classes).filter(m => navBarEl.classes[m] === true)
+    ).toEqual(['horizontal', 'large-filled']);
   });
 
   it('should use the \"large-empty\" layout when it is specified', () => {
@@ -482,7 +488,9 @@ describe('WizardNavigationBarComponent', () => {
     wizardTest.wizard.navBarLayout = 'large-empty';
     wizardTestFixture.detectChanges();
 
-    expect(navBarEl.classes).toEqual({ 'horizontal': true, 'large-empty': true });
+    expect(
+      Object.keys(navBarEl.classes).filter(m => navBarEl.classes[m] === true)
+    ).toEqual(['horizontal', 'large-empty']);
   });
 
   it('should use the \"large-filled-symbols\" layout when it is specified', () => {
@@ -491,7 +499,9 @@ describe('WizardNavigationBarComponent', () => {
     wizardTest.wizard.navBarLayout = 'large-filled-symbols';
     wizardTestFixture.detectChanges();
 
-    expect(navBarEl.classes).toEqual({ 'horizontal': true, 'large-filled-symbols': true });
+    expect(
+      Object.keys(navBarEl.classes).filter(m => navBarEl.classes[m] === true)
+    ).toEqual(['horizontal', 'large-filled-symbols']);
   });
 
   it('should use the \"large-empty-symbols\" layout when it is specified', () => {
@@ -500,7 +510,9 @@ describe('WizardNavigationBarComponent', () => {
     wizardTest.wizard.navBarLayout = 'large-empty-symbols';
     wizardTestFixture.detectChanges();
 
-    expect(navBarEl.classes).toEqual({ 'horizontal': true, 'large-empty-symbols': true });
+    expect(
+      Object.keys(navBarEl.classes).filter(m => navBarEl.classes[m] === true)
+    ).toEqual(['horizontal', 'large-empty-symbols']);
   });
 
   it('should show the correct step titles', () => {
