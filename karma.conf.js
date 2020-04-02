@@ -58,10 +58,6 @@ module.exports = function (config) {
           availableBrowsers[index] = 'ChromiumHeadlessNoSandbox';
         }
 
-        if (availableBrowsers.includes('IE')) {
-            availableBrowsers = availableBrowsers.filter(e => e != 'IE');
-        }
-
         return availableBrowsers;
       }
     },
