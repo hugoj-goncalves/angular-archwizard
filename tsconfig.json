@@ -27,5 +27,8 @@
         "dist/*"
       ]
     }
+  },
+  "angularCompilerOptions": {
+    "enableIvy": false
   }
 }
