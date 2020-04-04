@@ -7,9 +7,6 @@
 # dependencies
 /node_modules
 
-# bak
-*.bak
-
 # IDEs and editors
 /.idea
 .project
